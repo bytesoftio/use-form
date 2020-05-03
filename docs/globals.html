@@ -2365,26 +2365,11 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-class tsd-has-type-parameter">
-			<a href="classes/form.html" class="tsd-kind-icon">Form</a>
-		</li>
 		<li class=" tsd-kind-class">
 			<a href="classes/formbinder.html" class="tsd-kind-icon">Form<wbr>Binder</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-has-type-parameter">
-			<a href="interfaces/hookform.html" class="tsd-kind-icon">Hook<wbr>Form</a>
-		</li>
 		<li class=" tsd-kind-interface">
-			<a href="interfaces/hookformbinder.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Binder</a>
-		</li>
-		<li class=" tsd-kind-interface tsd-has-type-parameter">
-			<a href="interfaces/hookformdata.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Data</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="interfaces/hookformerrors.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Errors</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="interfaces/hookformfields.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Fields</a>
+			<a href="interfaces/observableformbinder.html" class="tsd-kind-icon">Observable<wbr>Form<wbr>Binder</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#buttonbindingoptions" class="tsd-kind-icon">Button<wbr>Binding<wbr>Options</a>
@@ -2393,43 +2378,10 @@ img {
 			<a href="globals.html#checkboxbinding" class="tsd-kind-icon">Checkbox<wbr>Binding</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#createform" class="tsd-kind-icon">Create<wbr>Form</a>
-		</li>
-		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#createformbinder" class="tsd-kind-icon">Create<wbr>Form<wbr>Binder</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#createformerrors" class="tsd-kind-icon">Create<wbr>Form<wbr>Errors</a>
-		</li>
-		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#createformfields" class="tsd-kind-icon">Create<wbr>Form<wbr>Fields</a>
-		</li>
-		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#createformstate" class="tsd-kind-icon">Create<wbr>Form<wbr>State</a>
-		</li>
-		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#formbindingoptions" class="tsd-kind-icon">Form<wbr>Binding<wbr>Options</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#formcallback" class="tsd-kind-icon">Form<wbr>Callback</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#formconfig" class="tsd-kind-icon">Form<wbr>Config</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#formhandler" class="tsd-kind-icon">Form<wbr>Handler</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#formspread" class="tsd-kind-icon">Form<wbr>Spread</a>
-		</li>
-		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#formsubmitoptions" class="tsd-kind-icon">Form<wbr>Submit<wbr>Options</a>
-		</li>
-		<li class=" tsd-kind-type-alias">
-			<a href="globals.html#formvalidateoptions" class="tsd-kind-icon">Form<wbr>Validate<wbr>Options</a>
-		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#formvalidator" class="tsd-kind-icon">Form<wbr>Validator</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#inputbinding" class="tsd-kind-icon">Input<wbr>Binding</a>
@@ -2449,11 +2401,8 @@ img {
 		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#useform" class="tsd-kind-icon">Use<wbr>Form</a>
 		</li>
-		<li class=" tsd-kind-function">
-			<a href="globals.html#createform" class="tsd-kind-icon">create<wbr>Form</a>
-		</li>
-		<li class=" tsd-kind-function">
-			<a href="globals.html#createformbinder" class="tsd-kind-icon">create<wbr>Form<wbr>Binder</a>
+		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+			<a href="globals.html#useformspread" class="tsd-kind-icon">Use<wbr>Form<wbr>Spread</a>
 		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#useform" class="tsd-kind-icon">use<wbr>Form</a>
@@ -2477,380 +2426,47 @@ img {
 			<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 			<ul>
 				<li><a href="#description">Description</a></li>
-				<li><a href="#quick-start">Quick start</a></li>
-				<li><a href="#form-config">Form config</a></li>
-				<li><a href="#form-data">Form data</a></li>
-				<li><a href="#validation-logic">Validation logic</a></li>
-				<li><a href="#validation-and-errors">Validation and errors</a></li>
-				<li><a href="#submit-form-and-provide-feedback">Submit form and provide feedback</a></li>
-				<li><a href="#reset-form-state">Reset form state</a></li>
-				<li><a href="#dirty-fields-and-changed-fields">Dirty fields and changed fields</a></li>
-				<li><a href="#status-indicators">Status indicators</a></li>
 				<li><a href="#form-hooks-and-bindings">Form hooks and bindings</a></li>
 			</ul>
 			<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 			<a href="#description" id="description" style="color: inherit; text-decoration: none;">
 				<h2>Description</h2>
 			</a>
-			<p>This package provides a very convenient abstraction for forms. I never liked the idea of forms being
-			defined and handled entirely inside React components, so I came up with this approach.</p>
-			<p>A form should be a first class citizen inside a project, kinda like a service. It should:</p>
-			<ul>
-				<li>Have an initial state</li>
-				<li>Have a way to reset to initial state</li>
-				<li>Have validation logic</li>
-				<li>Have a handler</li>
-				<li>Have things like loading indicators, dirty fields, etc.</li>
-				<li>Have an easy way to bind to input elements</li>
-				<li>Be typed properly </li>
-			</ul>
-			<p>Form logic consists mainly of these steps: </p>
-			<ul>
-				<li>Define form data structure</li>
-				<li>Provide initial state</li>
-				<li>Define validation logic</li>
-				<li>Define handler logic</li>
-				<li>Provide status messages from within a handler like success, error, etc.</li>
-				<li>Share form submission result</li>
-			</ul>
-			<p>A form with all of these things should be treated like a regular service,
-				it has no place inside a presentation component. A component should simply bind
-				form data to according input elements, consume validation errors and status messages,
-			block form during submission and other purely presentation related stuff.</p>
-			<p>If you agree at least with some of the points above, stay with me, this library totally
-			changed how I work with forms and might change your approach as well.</p>
-			<a href="#quick-start" id="quick-start" style="color: inherit; text-decoration: none;">
-				<h2>Quick start</h2>
-			</a>
-			<p>Let&#39;s create a very simple form, where you can create a new user through an api call, with validation, etc.
-				Keep in mind that this example could be much shorter in terms of lines of code It all depends on
-				how much types you want to write. I always try to use as precise types as possible, so there is some boilerplate
-			code around. I think it totally pays off in the long run though.</p>
-			<pre><code class="language-ts"><span class="hljs-comment">// types.ts</span>
-
-<span class="hljs-comment">// sample data type that you want to create through an api call</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> User = {
-  uuid: <span class="hljs-built_in">string</span>
-  firstName: <span class="hljs-built_in">string</span>
-  lastName: <span class="hljs-built_in">string</span>
-}
-
-<span class="hljs-comment">// this is what the form looks like</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> CreateUserForm = {
-  firstName: <span class="hljs-built_in">string</span>
-  lastName: <span class="hljs-built_in">string</span>
-}
-
-<span class="hljs-comment">// meaningful feedback for form consumers</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> CreateUserResult = {
-  success?: <span class="hljs-built_in">string</span>
-  error?: <span class="hljs-built_in">string</span>
-  user?: User
-}</code></pre>
-			<pre><code class="language-ts"><span class="hljs-comment">// api.ts</span>
-
-<span class="hljs-keyword">import</span> { User, CreateUserForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"./types"</span>
-
-<span class="hljs-comment">// simulate api call for demo purposes</span>
-<span class="hljs-keyword">const</span> createUser = <span class="hljs-keyword">async</span> (data: CreateUserForm): <span class="hljs-built_in">Promise</span>&lt;User&gt; =&gt; ({ id: <span class="hljs-number">1</span>, ...data })</code></pre>
-			<pre><code class="language-ts"><span class="hljs-comment">// form.ts</span>
-
-<span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form/src"</span>
-<span class="hljs-keyword">import</span> { object, <span class="hljs-built_in">string</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/schema"</span>
-<span class="hljs-keyword">import</span> { CreateUserForm, CreateUserResult } <span class="hljs-keyword">from</span> <span class="hljs-string">"./types"</span>
-<span class="hljs-keyword">import</span> { createUser } <span class="hljs-keyword">from</span> <span class="hljs-string">"./api.ts"</span>
-
-<span class="hljs-comment">// a dedicated form factory</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> createUserForm = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  <span class="hljs-comment">// create a new form with initial state</span>
-  <span class="hljs-keyword">return</span> createForm&lt;CreateUserForm, CreateUserResult&gt;({
-    firstName: <span class="hljs-string">""</span>,
-    lastName: <span class="hljs-string">""</span>
-  })
-    <span class="hljs-comment">// using @bytesoftio/schema package for validation</span>
-    .schema(object({
-      firstName: <span class="hljs-built_in">string</span>().min(<span class="hljs-number">2</span>).max(<span class="hljs-number">20</span>),
-      lastName: <span class="hljs-built_in">string</span>().min(<span class="hljs-number">2</span>).max(<span class="hljs-number">20</span>)
-    }))
-    <span class="hljs-comment">// add form handling logic</span>
-    .handler(<span class="hljs-keyword">async</span> (form) =&gt; {
-      <span class="hljs-keyword">try</span> {
-        <span class="hljs-comment">// pretend to make an api call here </span>
-        <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> createUser(form.data.get())
-
-        form.result.set({ success: <span class="hljs-string">"User created"</span>, user })
-      } <span class="hljs-keyword">catch</span> (error) {
-        form.result.set({ error: <span class="hljs-string">"Could not create user"</span> })
-      }
-    })
-}</code></pre>
-			<pre><code class="language-tsx">// component.tsx
-
-import React from &quot;react&quot;
-import { useForm } from &quot;@bytesoftio/use-form&quot;
-import { createUserForm } from &quot;./form.ts&quot;
-
-const CreateUserForm = () =&gt; {
-  // create a new form instance and consume it for proper re-renders when state changes
-  const form = useForm(createUserForm)
-  // grab what you need from various state objects
-  const [errors, result] = [form.errors, form.result.get()]
-
-  return (
-    &lt;form {...form.bind.form()}&gt;
-      &lt;div&gt;{result?.success || result?.error }&lt;/div&gt;
-
-      &lt;div&gt;
-        &lt;input {...form.bind.input(&quot;firstName&quot;)} placeholder=&quot;First name&quot;/&gt;
-        &lt;div&gt;{errors.getAt(&quot;firstName&quot;)}&lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;div&gt;
-        &lt;input {...form.bind.input(&quot;lastName&quot;)} placeholder=&quot;Last name&quot;/&gt;
-        &lt;div&gt;{errors.getAt(&quot;lastName&quot;)}&lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;button {...form.bind.button()}&gt;Create&lt;/button&gt;
-    &lt;/form&gt;
-  )
-}</code></pre>
-			<a href="#form-config" id="form-config" style="color: inherit; text-decoration: none;">
-				<h2>Form config</h2>
-			</a>
-			<p>Form behaviour can be altered through several config options:</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-
-<span class="hljs-keyword">const</span> form = createForm({})
-    .configure({
-    <span class="hljs-comment">// run validation whenever from state changes</span>
-    validateOnChange: <span class="hljs-literal">true</span>,
-    <span class="hljs-comment">// if validateOnChange is set to true, define whether all fields should</span>
-    <span class="hljs-comment">// be validated or only those that have been changed through user input</span>
-    validateChangedFieldsOnly: <span class="hljs-literal">false</span>,
-    <span class="hljs-comment">// run validattions before submitting form</span>
-    validateOnSubmit: <span class="hljs-literal">true</span>
-  })</code></pre>
-			<a href="#form-data" id="form-data" style="color: inherit; text-decoration: none;">
-				<h2>Form data</h2>
-			</a>
-			<p>All the form data is stored inside the <code>form.data</code> object. It comes with a few convenient helper methods.</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-
-<span class="hljs-keyword">const</span> initialState = { field1: <span class="hljs-string">""</span>, field2: <span class="hljs-string">""</span>, field3: <span class="hljs-string">""</span> }
-<span class="hljs-keyword">const</span> form = createForm(initialState)
-
-<span class="hljs-comment">// retrieve all of the form data</span>
-form.data.get()
-
-<span class="hljs-comment">// replace all form data with new one</span>
-form.data.set({ field1: <span class="hljs-string">"foo"</span>, field2: <span class="hljs-string">"bar"</span> })
-
-<span class="hljs-comment">// add / replace some of the data with new one</span>
-form.data.add({ field3: <span class="hljs-string">"baz"</span> })
-
-<span class="hljs-comment">// reset data back to its initial state</span>
-form.data.reset()
-
-<span class="hljs-comment">// alternatively you can provide new state that should be used as initialState</span>
-form.data.reset({ field1: <span class="hljs-string">"-"</span>, field2: <span class="hljs-string">"-"</span>, field3: <span class="hljs-string">"-"</span> })
-
-<span class="hljs-comment">// retrieve a spefcific form field value</span>
-form.data.getAt(<span class="hljs-string">"path.to.field"</span>)
-
-<span class="hljs-comment">// replace a specific form field value</span>
-form.data.setAt(<span class="hljs-string">"path.to.field"</span>, <span class="hljs-string">"value"</span>)
-
-<span class="hljs-comment">// check if form has a certain value</span>
-form.data.hasAt(<span class="hljs-string">"path.to.field"</span>)</code></pre>
-			<a href="#validation-logic" id="validation-logic" style="color: inherit; text-decoration: none;">
-				<h2>Validation logic</h2>
-			</a>
-			<p>Form can be validated in several ways. Mostly you&#39;ll want to use the <code>schema</code> method. It takes as schema description object produced by the <code>@bytesoftio/schema</code> package. But it is also possible to provide a custom validation function.</p>
-			<p>Lets take a look at the custom validate function first. A validation function can be <code>sync</code> or <code>async</code> and must return either <code>undefined</code> / nothing in case of a successful validation, or an error object of type <code>ValidationResult</code> that you can find in the <code>@bytesoftio/schema</code> package.</p>
-			<pre><code class="language-tsx">import { createForm } from &quot;@bytesoftio/use-form&quot;
-
-const form = createForm({ 
-  title: &quot;&quot;, 
-  user: { firstName: &quot;&quot; }
-})
-    .validator(async (form) =&gt; {
-    const data = form.data.get()
-
-    // some validation logic ...
-
-    return {
-      title: [&quot;Value missing&quot;],
-      &quot;user.firstName&quot;: [&quot;Value missing&quot;]
-    }
-  })</code></pre>
-			<p>Additionaly it is possible to provide a validation schema powered by the very easy to use <code>@bytesoftio/schema</code> package.</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-<span class="hljs-keyword">import</span> { object, <span class="hljs-built_in">string</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/schema"</span>
-
-<span class="hljs-keyword">const</span> form = createForm({ 
-  title: <span class="hljs-string">""</span>, 
-  user: { firstName: <span class="hljs-string">""</span> }
-})
-    .schema(object({
-    title: <span class="hljs-built_in">string</span>().between(<span class="hljs-number">3</span>, <span class="hljs-number">50</span>),
-    user: object({ firstName: <span class="hljs-built_in">string</span>().between(<span class="hljs-number">3</span>, <span class="hljs-number">50</span>) })
-  }))</code></pre>
-			<a href="#validation-and-errors" id="validation-and-errors" style="color: inherit; text-decoration: none;">
-				<h2>Validation and errors</h2>
-			</a>
-			<p>A form can be validated manually, before submission, using the <code>validate</code> method. The result is either <code>undefined</code>, in case of a successful validation, or an error object of type <code>ValidationResult</code>, from the <code>@bytesoftio/schema</code> package.</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-
-<span class="hljs-keyword">const</span> form = createForm({})
-<span class="hljs-keyword">const</span> errors = <span class="hljs-keyword">await</span> form.validate()
-
-<span class="hljs-keyword">if</span> ( ! errors) {
-  <span class="hljs-comment">// submit form ...</span>
-}</code></pre>
-			<p>Form can be configured to validate only the changed fields, or validate immediately on user input, etc. Take a look at <a href="#form-config">form config</a> section. </p>
-			<p>You can validate changed fields only without configuring the form, by providing a specific flag.</p>
-			<pre><code class="language-ts">form.validate({ changedFieldsOnly: <span class="hljs-literal">true</span> })</code></pre>
-			<p>When submitting a form, validations are run atomatically, unless configured otherwise.</p>
-			<p>You can access form errors anytime trough <code>form.errors</code> property. The errors object has many convenience method when dealing with errors.</p>
-			<pre><code class="language-ts"><span class="hljs-comment">// get all validation errors</span>
-form.errors.get()
-
-<span class="hljs-comment">// replace old errors with new one</span>
-form.errors.set({ firstName: [<span class="hljs-string">"Value is missing"</span>] })
-
-<span class="hljs-comment">// add some new errors, but keep the old ones</span>
-form.errors.add({ firstName: [<span class="hljs-string">"Value is missing"</span>] })
-
-<span class="hljs-comment">// are there any errors, returns boolean</span>
-form.errors.has()
-
-<span class="hljs-comment">// clear all errors</span>
-form.errors.clear()
-
-<span class="hljs-comment">// get errors for a specific field</span>
-form.errors.getAt(<span class="hljs-string">"path.to.field"</span>)
-
-<span class="hljs-comment">// replace old errors with the new ones for a specific field</span>
-form.errors.setAt(<span class="hljs-string">"path.to.field"</span>, [<span class="hljs-string">"New error"</span>])
-
-<span class="hljs-comment">// add new errors for a specific field, but keep the old ones</span>
-form.errors.addAt(<span class="hljs-string">"path.to.field"</span>, <span class="hljs-string">"New error"</span>)
-form.errors.addAt(<span class="hljs-string">"path.to.field"</span>, [<span class="hljs-string">"New error1"</span>, <span class="hljs-string">"New error2"</span>])
-
-<span class="hljs-comment">// check if there are errors for specific fields</span>
-form.errors.hasAt(<span class="hljs-string">"path.to.field"</span>)
-form.errors.hasAt([<span class="hljs-string">"path.to.field1"</span>], <span class="hljs-string">"path.to.field2"</span>)
-
-<span class="hljs-comment">// clear errors for specific fields</span>
-form.errors.clearAt(<span class="hljs-string">"path.to.field"</span>)
-form.errors.clearAt([<span class="hljs-string">"path.to.field1"</span>, <span class="hljs-string">"path.to.field2"</span>])</code></pre>
-			<a href="#submit-form-and-provide-feedback" id="submit-form-and-provide-feedback" style="color: inherit; text-decoration: none;">
-				<h2>Submit form and provide feedback</h2>
-			</a>
-			<p>To submit a form to an API you need to provide a form handler. This piece of logic is responsible for extracting form data, sending data to an endpoint, handling remote errors, providing meaningful feedback to the form consumers / presentation layer.</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-
-<span class="hljs-keyword">const</span> form = createForm()
-    .handler(<span class="hljs-keyword">async</span> form =&gt; {
-        <span class="hljs-keyword">try</span> {
-      <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> sendFormData(form.data.get())
-
-         form.result.set({ success: <span class="hljs-string">"Data sent succefully"</span>, result })
-    } <span class="hljs-keyword">catch</span> (error) {
-      form.result.set({ error: <span class="hljs-string">"Could not send data"</span> })
-    }
-  })</code></pre>
-			<p>To provide meaningful feedback to form consumers you can use the <code>form.result</code> object. Any kind of feedback coming from a form handler, except validation messages, should go into the <code>form.result</code> object, those might be things like status messages, data received from an endpoint after creating an entity on the remote, etc. Everything can be statically typed, take a look at <a href="#quick-start">quick start</a> to learn more about this.</p>
-			<p>When submitting a form, validations are run automatically, you can prevent this by configuring the form accordingly, see <a href="#form-config">form config</a>, or setting a flag.</p>
-			<pre><code class="language-ts">form.submit({ validate: <span class="hljs-literal">false</span> })</code></pre>
-			<a href="#reset-form-state" id="reset-form-state" style="color: inherit; text-decoration: none;">
-				<h2>Reset form state</h2>
-			</a>
-			<p>You can reset all of the form state back to its initial value as well as all the errors, dirty fields, results, etc.</p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-
-<span class="hljs-keyword">const</span> form = createForm({ field1: <span class="hljs-string">"foo"</span>, field2: <span class="hljs-string">"bar"</span> })
-
-<span class="hljs-comment">// reset form</span>
-form.reset()
-
-<span class="hljs-comment">// reset form and provide a new initial state</span>
-form.reset({ field1: <span class="hljs-string">""</span>, field2: <span class="hljs-string">""</span>})</code></pre>
-			<a href="#dirty-fields-and-changed-fields" id="dirty-fields-and-changed-fields" style="color: inherit; text-decoration: none;">
-				<h2>Dirty fields and changed fields</h2>
-			</a>
-			<p>You can check if any specific field has been changed through user input. There is a differentiation between <code>diryFields</code> and <code>changedFields</code>. As soon as a form field has been changed, for example from <code>&quot;&quot;</code> to <code>&quot;foo&quot;</code> - it becomes dirty. If the field changes back to <code>&quot;&quot;</code>, it is still dirty. <code>changedFields</code> works slightly different. A field is changed only if the value is actually different from the initial one. So a field can be dirty and <em>not</em> changed at the same time.</p>
-			<p><code>dirtyFields</code> and  <code>changedFields</code> have both the same interface <code>HookFormFields</code>. </p>
-			<pre><code class="language-ts"><span class="hljs-keyword">import</span> { createForm } <span class="hljs-keyword">from</span> <span class="hljs-string">"@bytesoftio/use-form"</span>
-
-<span class="hljs-keyword">const</span> form = createForm({})
-
-<span class="hljs-comment">// grab all dirty fields, returns an array of strings[]</span>
-form.dirtyFields.get()
-
-<span class="hljs-comment">// check if on or multiple fields are dirty, returns boolean</span>
-form.dirtyFields.has(<span class="hljs-string">"field"</span>)
-form.dirtyFields.has([<span class="hljs-string">"field1"</span>, <span class="hljs-string">"path.to.field2"</span>])
-
-<span class="hljs-comment">// replace old dirty fields with new opnes</span>
-form.dirtyFields.set([<span class="hljs-string">"field1"</span>, <span class="hljs-string">"path.to.field2"</span>])
-
-<span class="hljs-comment">// add additional dirty fields to the existing ones</span>
-form.dirtyFields.add(<span class="hljs-string">"field1"</span>)
-form.dirtyFields.add([<span class="hljs-string">"field1"</span>, <span class="hljs-string">"path.to.field2"</span>])
-
-<span class="hljs-comment">// remove some dirty fields</span>
-form.dirtyFields.remove(<span class="hljs-string">"field1"</span>)
-form.dirtyFields.remove([<span class="hljs-string">"field1"</span>, <span class="hljs-string">"path.to.field2"</span>])
-
-<span class="hljs-comment">// clear all fields</span>
-form.dirtyfields.clear()
-
-<span class="hljs-comment">// get notified whenever dirty fields change</span>
-form.dirtyFields.listen(<span class="hljs-function">(<span class="hljs-params">fields</span>) =&gt;</span> <span class="hljs-built_in">console</span>.log(fields))</code></pre>
-			<p>Once again, the <code>form.changedFields</code> object is absolutely identical, in terms of interface, to the <code>form.dirtyFields</code> one. There is no need for additional docs here.</p>
-			<a href="#status-indicators" id="status-indicators" style="color: inherit; text-decoration: none;">
-				<h2>Status indicators</h2>
-			</a>
-			<p>Sometimes you&#39;ll need a flag to tell if form is currently being submitted, or has already been submitted. In this case you can use one of these status objects: <code>form.submitting</code> or <code>form.submitted</code>. Both implement the <code>HookValue</code> interface that comes from the <code>@bytesoftio/use-value</code> package and has all the relevant docs.</p>
-			<pre><code class="language-ts"><span class="hljs-comment">// is form currently being submitted, returns boolean</span>
-form.submitting.get()
-<span class="hljs-comment">// has form already been submitted, returns boolean</span>
-form.submitted.get()</code></pre>
+			<p>This library provides an integration form the <a href="https://github.com/bytesoftio/form">@bytesoftio/form</a> package.</p>
 			<a href="#form-hooks-and-bindings" id="form-hooks-and-bindings" style="color: inherit; text-decoration: none;">
 				<h2>Form hooks and bindings</h2>
 			</a>
 			<p>For a React component to properly update upon form state changes, you must first hook the form up. There are several ways on how to consume forms in components.</p>
-			<p>After consuming a form you must bind it to input fields. This library already ships with a very lightweight binder inside, but you can very easily roll your own binder for your specific ui library, like Antd for example.. Just take a look on how <code>FormBinder</code>  is written - its easy as cacke.</p>
+			<p>After consuming a form you must bind it to input fields. This library already ships with a very lightweight binder inside, but you can very easily roll your own binder for your specific ui library. Just take a look on how <code>FormBinder</code>  is written - its easy as cake.</p>
 			<p>Lets take a look on how to use hooks and bindings:</p>
 			<pre><code class="language-tsx">import React from &quot;react&quot;
-import { createForm, useForm } from &quot;@bytesoftio/use-form&quot;
+import { createForm } from &quot;@bytesoftio/form&quot;
+import { useForm } from &quot;@bytesoftio/use-form&quot;
 
-const specialFormFactory = () =&gt; createForm()
+const formFactory = () =&gt; createForm()
 const sharedFormInstance = createForm()
 
 const Component = () =&gt; {
-  const formFromFactory = useForm(specialFormFactory)
-  const sharedForm = useForm(sharedFormInstance)
-  const formFromInlineFactory = useForm(() =&gt; createForm())
-  const inlineForm = useForm(inlineForm())
+  const [formFromFactory, bind] = useForm(formFactory)
+  const [sharedForm] = useForm(sharedFormInstance)
+  const [formFromInlineFactory] = useForm(() =&gt; createForm())
 
     return (
-    &lt;form { ...form.bind.form() }&gt;
-        &lt;input type=&quot;text&quot; { ...form.bind.input(&quot;field1&quot;) } /&gt;
+    &lt;form { ...bind.form() }&gt;
+        &lt;input type=&quot;text&quot; { ...bind.input(&quot;field1&quot;) } /&gt;
 
-      &lt;input type=&quot;checkbox&quot; { ...form.bind.checkbox(&quot;field2&quot;) } /&gt;
+      &lt;input type=&quot;checkbox&quot; { ...bind.checkbox(&quot;field2&quot;) } /&gt;
 
-      &lt;input type=&quot;radio&quot; { ...form.bind.radio(&quot;field3&quot;, &quot;value1&quot;) } /&gt;
-      &lt;input type=&quot;radio&quot; { ...form.bind.radio(&quot;field3&quot;, &quot;value2&quot;) } /&gt;
+      &lt;input type=&quot;radio&quot; { ...bind.radio(&quot;field3&quot;, &quot;value1&quot;) } /&gt;
+      &lt;input type=&quot;radio&quot; { ...bind.radio(&quot;field3&quot;, &quot;value2&quot;) } /&gt;
 
-      &lt;select { ...form.bind.select(&quot;field4&quot;) }&gt;
+      &lt;select { ...bind.select(&quot;field4&quot;) }&gt;
         &lt;option&gt;option 1&lt;/option&gt;
         &lt;option&gt;option 2&lt;option&gt;
         &lt;option&gt;option 3&lt;option&gt;
       &lt;/select&gt;
 
-      &lt;button { ...form.bind.submit() }&gt;Submit&lt;/button&gt;
+      &lt;button { ...bind.submit() }&gt;Submit&lt;/button&gt;
     &lt;/form&gt;
   )
 }</code></pre>
@@ -2862,18 +2478,13 @@ const Component = () =&gt; {
 					<section class="tsd-index-section ">
 						<h3>Classes</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/form.html" class="tsd-kind-icon">Form</a></li>
 							<li class="tsd-kind-class"><a href="classes/formbinder.html" class="tsd-kind-icon">Form<wbr>Binder</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Interfaces</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/hookform.html" class="tsd-kind-icon">Hook<wbr>Form</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/hookformbinder.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Binder</a></li>
-							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/hookformdata.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Data</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/hookformerrors.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Errors</a></li>
-							<li class="tsd-kind-interface"><a href="interfaces/hookformfields.html" class="tsd-kind-icon">Hook<wbr>Form<wbr>Fields</a></li>
+							<li class="tsd-kind-interface"><a href="interfaces/observableformbinder.html" class="tsd-kind-icon">Observable<wbr>Form<wbr>Binder</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2881,32 +2492,20 @@ const Component = () =&gt; {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-type-alias"><a href="globals.html#buttonbindingoptions" class="tsd-kind-icon">Button<wbr>Binding<wbr>Options</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#checkboxbinding" class="tsd-kind-icon">Checkbox<wbr>Binding</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#createform" class="tsd-kind-icon">Create<wbr>Form</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#createformbinder" class="tsd-kind-icon">Create<wbr>Form<wbr>Binder</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#createformerrors" class="tsd-kind-icon">Create<wbr>Form<wbr>Errors</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#createformfields" class="tsd-kind-icon">Create<wbr>Form<wbr>Fields</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#createformstate" class="tsd-kind-icon">Create<wbr>Form<wbr>State</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#formbindingoptions" class="tsd-kind-icon">Form<wbr>Binding<wbr>Options</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#formcallback" class="tsd-kind-icon">Form<wbr>Callback</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#formconfig" class="tsd-kind-icon">Form<wbr>Config</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#formhandler" class="tsd-kind-icon">Form<wbr>Handler</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#formspread" class="tsd-kind-icon">Form<wbr>Spread</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#formsubmitoptions" class="tsd-kind-icon">Form<wbr>Submit<wbr>Options</a></li>
-							<li class="tsd-kind-type-alias"><a href="globals.html#formvalidateoptions" class="tsd-kind-icon">Form<wbr>Validate<wbr>Options</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#formvalidator" class="tsd-kind-icon">Form<wbr>Validator</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#inputbinding" class="tsd-kind-icon">Input<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#radiobinding" class="tsd-kind-icon">Radio<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#selectbinding" class="tsd-kind-icon">Select<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#submitbinding" class="tsd-kind-icon">Submit<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#submitbuttonbinding" class="tsd-kind-icon">Submit<wbr>Button<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#useform" class="tsd-kind-icon">Use<wbr>Form</a></li>
+							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#useformspread" class="tsd-kind-icon">Use<wbr>Form<wbr>Spread</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-function"><a href="globals.html#createform" class="tsd-kind-icon">create<wbr>Form</a></li>
-							<li class="tsd-kind-function"><a href="globals.html#createformbinder" class="tsd-kind-icon">create<wbr>Form<wbr>Binder</a></li>
 							<li class="tsd-kind-function"><a href="globals.html#useform" class="tsd-kind-icon">use<wbr>Form</a></li>
 						</ul>
 					</section>
@@ -2921,7 +2520,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Button<wbr>Binding<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>disableOnSubmit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:103</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L10">src/types.ts:10</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2942,7 +2541,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Checkbox<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>checked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:109</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L16">src/types.ts:16</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2979,52 +2578,12 @@ const Component = () =&gt; {
 				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="createform" class="tsd-anchor"></a>
-				<h3>Create<wbr>Form</h3>
-				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<span class="tsd-signature-symbol">:</span> &lt;S, R&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:5</li>
-					</ul>
-				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
-								<li class="tsd-signature tsd-kind-icon">&lt;S, R&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-type-parameters-title">Type parameters</h4>
-									<ul class="tsd-type-parameters">
-										<li>
-											<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-										</li>
-										<li>
-											<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-										</li>
-									</ul>
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5>initialState: <span class="tsd-signature-type">S</span></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
 				<a name="createformbinder" class="tsd-anchor"></a>
 				<h3>Create<wbr>Form<wbr>Binder</h3>
-				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<wbr>Binder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/hookformbinder.html" class="tsd-signature-type">HookFormBinder</a></div>
+				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<wbr>Binder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:100</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L7">src/types.ts:7</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3032,122 +2591,17 @@ const Component = () =&gt; {
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-signature">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookformbinder.html" class="tsd-signature-type">HookFormBinder</a></li>
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
 									<h4 class="tsd-parameters-title">Parameters</h4>
 									<ul class="tsd-parameters">
 										<li>
-											<h5>form: <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a></h5>
+											<h5>form: <span class="tsd-signature-type">ObservableForm</span></h5>
 										</li>
 									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="interfaces/hookformbinder.html" class="tsd-signature-type">HookFormBinder</a></h4>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="createformerrors" class="tsd-anchor"></a>
-				<h3>Create<wbr>Form<wbr>Errors</h3>
-				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<wbr>Errors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/hookformerrors.html" class="tsd-signature-type">HookFormErrors</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:6</li>
-					</ul>
-				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookformerrors.html" class="tsd-signature-type">HookFormErrors</a></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> initialState: <span class="tsd-signature-type">ValidationResult</span></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="interfaces/hookformerrors.html" class="tsd-signature-type">HookFormErrors</a></h4>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="createformfields" class="tsd-anchor"></a>
-				<h3>Create<wbr>Form<wbr>Fields</h3>
-				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<wbr>Fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:7</li>
-					</ul>
-				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> initialState: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a></h4>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="createformstate" class="tsd-anchor"></a>
-				<h3>Create<wbr>Form<wbr>State</h3>
-				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<wbr>State<span class="tsd-signature-symbol">:</span> &lt;S&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, dirtyFields<span class="tsd-signature-symbol">: </span><a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a>, changedFields<span class="tsd-signature-symbol">: </span><a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/hookformdata.html" class="tsd-signature-type">HookFormData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:8</li>
-					</ul>
-				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
-								<li class="tsd-signature tsd-kind-icon">&lt;S&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, dirtyFields<span class="tsd-signature-symbol">: </span><a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a>, changedFields<span class="tsd-signature-symbol">: </span><a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookformdata.html" class="tsd-signature-type">HookFormData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-type-parameters-title">Type parameters</h4>
-									<ul class="tsd-type-parameters">
-										<li>
-											<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-										</li>
-									</ul>
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5>initialState: <span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
-										</li>
-										<li>
-											<h5>dirtyFields: <a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a></h5>
-										</li>
-										<li>
-											<h5>changedFields: <a href="interfaces/hookformfields.html" class="tsd-signature-type">HookFormFields</a></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="interfaces/hookformdata.html" class="tsd-signature-type">HookFormData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									<h4 class="tsd-returns-title">Returns <a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a></h4>
 								</li>
 							</ul>
 						</li>
@@ -3160,7 +2614,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Form<wbr>Binding<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:102</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L9">src/types.ts:9</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3168,220 +2622,6 @@ const Component = () =&gt; {
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter">
 							<h5><span class="tsd-flag ts-flagOptional">Optional</span> validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="formcallback" class="tsd-anchor"></a>
-				<h3>Form<wbr>Callback</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Callback&lt;S, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:10</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-					<li>
-						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-				</ul>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5>form: <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="formconfig" class="tsd-anchor"></a>
-				<h3>Form<wbr>Config</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Config&lt;S, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>handlers<span class="tsd-signature-symbol">: </span><a href="globals.html#formhandler" class="tsd-signature-type">FormHandler</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>schemas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValidationSchema</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>validateChangedFieldsOnly<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>validateOnChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>validateOnSubmit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>validators<span class="tsd-signature-symbol">: </span><a href="globals.html#formvalidator" class="tsd-signature-type">FormValidator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:18</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-					<li>
-						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-				</ul>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter">
-							<h5>handlers<span class="tsd-signature-symbol">: </span><a href="globals.html#formhandler" class="tsd-signature-type">FormHandler</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-						</li>
-						<li class="tsd-parameter">
-							<h5>schemas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValidationSchema</span><span class="tsd-signature-symbol">[]</span></h5>
-						</li>
-						<li class="tsd-parameter">
-							<h5>validate<wbr>Changed<wbr>Fields<wbr>Only<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
-						</li>
-						<li class="tsd-parameter">
-							<h5>validate<wbr>OnChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
-						</li>
-						<li class="tsd-parameter">
-							<h5>validate<wbr>OnSubmit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></h5>
-						</li>
-						<li class="tsd-parameter">
-							<h5>validators<span class="tsd-signature-symbol">: </span><a href="globals.html#formvalidator" class="tsd-signature-type">FormValidator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="formhandler" class="tsd-anchor"></a>
-				<h3>Form<wbr>Handler</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Handler&lt;S, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:11</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-					<li>
-						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-				</ul>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5>form: <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span></h4>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="formspread" class="tsd-anchor"></a>
-				<h3>Form<wbr>Spread</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Spread&lt;S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:12</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>S</h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="formsubmitoptions" class="tsd-anchor"></a>
-				<h3>Form<wbr>Submit<wbr>Options</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Submit<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:14</li>
-					</ul>
-				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter">
-							<h5><span class="tsd-flag ts-flagOptional">Optional</span> validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias">
-				<a name="formvalidateoptions" class="tsd-anchor"></a>
-				<h3>Form<wbr>Validate<wbr>Options</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Validate<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>changedFieldsOnly<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:13</li>
-					</ul>
-				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter">
-							<h5><span class="tsd-flag ts-flagOptional">Optional</span> changed<wbr>Fields<wbr>Only<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="formvalidator" class="tsd-anchor"></a>
-				<h3>Form<wbr>Validator</h3>
-				<div class="tsd-signature tsd-kind-icon">Form<wbr>Validator&lt;S, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in src/types.ts:9</li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-					<li>
-						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-				</ul>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-signature">
-							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
-							</ul>
-							<ul class="tsd-descriptions">
-								<li class="tsd-description">
-									<h4 class="tsd-parameters-title">Parameters</h4>
-									<ul class="tsd-parameters">
-										<li>
-											<h5>form: <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
-										</li>
-									</ul>
-									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ValidationResult</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
-								</li>
-							</ul>
 						</li>
 					</ul>
 				</div>
@@ -3392,7 +2632,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Input<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:107</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L14">src/types.ts:14</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3434,7 +2674,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Radio<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>checked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:110</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L17">src/types.ts:17</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3476,7 +2716,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Select<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:108</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L15">src/types.ts:15</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3518,7 +2758,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Submit<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>onSubmit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:105</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L12">src/types.ts:12</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3554,7 +2794,7 @@ const Component = () =&gt; {
 				<div class="tsd-signature tsd-kind-icon">Submit<wbr>Button<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>disabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>onClick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:106</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L13">src/types.ts:13</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3590,10 +2830,10 @@ const Component = () =&gt; {
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
 				<a name="useform" class="tsd-anchor"></a>
 				<h3>Use<wbr>Form</h3>
-				<div class="tsd-signature tsd-kind-icon">Use<wbr>Form<span class="tsd-signature-symbol">:</span> &lt;S, R&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<div class="tsd-signature tsd-kind-icon">Use<wbr>Form<span class="tsd-signature-symbol">:</span> &lt;S, R&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="globals.html#useformspread" class="tsd-signature-type">UseFormSpread</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in src/types.ts:16</li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L4">src/types.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3601,7 +2841,7 @@ const Component = () =&gt; {
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-signature">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
-								<li class="tsd-signature tsd-kind-icon">&lt;S, R&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+								<li class="tsd-signature tsd-kind-icon">&lt;S, R&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#useformspread" class="tsd-signature-type">UseFormSpread</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
@@ -3617,85 +2857,58 @@ const Component = () =&gt; {
 									<h4 class="tsd-parameters-title">Parameters</h4>
 									<ul class="tsd-parameters">
 										<li>
-											<h5>initialState: <span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											<h5>initialState: <span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
 										</li>
 									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									<h4 class="tsd-returns-title">Returns <a href="globals.html#useformspread" class="tsd-signature-type">UseFormSpread</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
 			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+				<a name="useformspread" class="tsd-anchor"></a>
+				<h3>Use<wbr>Form<wbr>Spread</h3>
+				<div class="tsd-signature tsd-kind-icon">Use<wbr>Form<wbr>Spread&lt;S, R&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a><span class="tsd-signature-symbol">]</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/types.ts#L5">src/types.ts:5</a></li>
+					</ul>
+				</aside>
+				<h4 class="tsd-type-parameters-title">Type parameters</h4>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>S<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+					</li>
+					<li>
+						<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
+					</li>
+				</ul>
+			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Functions</h2>
 			<section class="tsd-panel tsd-member tsd-kind-function">
-				<a name="createform" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> create<wbr>Form</h3>
-				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">create<wbr>Form<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/form.html" class="tsd-signature-type">Form</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in src/createForm.ts:4</li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>initialState: <span class="tsd-signature-type">S</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="classes/form.html" class="tsd-signature-type">Form</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function">
-				<a name="createformbinder" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagConst">Const</span> create<wbr>Form<wbr>Binder</h3>
-				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">create<wbr>Form<wbr>Binder<span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/formbinder.html" class="tsd-signature-type">FormBinder</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in src/createFormBinder.ts:4</li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>form: <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="classes/formbinder.html" class="tsd-signature-type">FormBinder</a></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-function">
 				<a name="useform" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> use<wbr>Form</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">use<wbr>Form<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">use<wbr>Form<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a><span class="tsd-signature-symbol">]</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in src/useForm.ts:5</li>
+								<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/215996c/src/useForm.ts#L8">src/useForm.ts:8</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>initialState: <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span></h5>
+								<h5>initialState: <span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="interfaces/hookform.html" class="tsd-signature-type">HookForm</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a><span class="tsd-signature-symbol">]</span></h4>
 					</li>
 				</ul>
 			</section>

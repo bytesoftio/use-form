@@ -18,13 +18,15 @@
     "lint": "tsc --noEmit",
     "build": "rm -rf dist && tsc -p tsconfig.build.json",
     "docs": "doctoc readme.md && typedoc src/index.ts --out docs --hideGenerator --tsconfig tsconfig.build.json --mode library --theme minimal",
-    "release": "yarn run build && np"
+    "release": "yarn run build && np --no-release-draft"
   },
   "dependencies": {
+    "@bytesoftio/form": "^2.0.2",
     "@bytesoftio/helpers-promises": "^1.0.0",
-    "@bytesoftio/schema": "^1.0.1",
-    "@bytesoftio/use-store": "^1.2.0",
-    "@bytesoftio/use-value": "^1.2.0",
+    "@bytesoftio/schema": "^1.1.0",
+    "@bytesoftio/use-store": "^2.1.0",
+    "@bytesoftio/use-value": "^2.2.0",
+    "@bytesoftio/value": "^2.0.1",
     "lodash": "^4.17.15"
   },
   "peerDependencies": {

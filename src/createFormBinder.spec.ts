@@ -1,6 +1,6 @@
 import { createFormBinder } from "./createFormBinder"
 import { FormBinder } from "./FormBinder"
-import { createForm } from "./createForm"
+import { createForm } from "@bytesoftio/form"
 
 describe("createFormBinder", () => {
   it("creates form binder", () => {

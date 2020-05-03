@@ -1,18 +1,20 @@
 import {
+  ButtonBindingOptions,
   CheckboxBinding,
-  HookFormBinder,
-  InputBinding,
-  RadioBinding,
-  SubmitBinding,
   FormBindingOptions,
+  InputBinding,
+  ObservableFormBinder,
+  RadioBinding,
+  SelectBinding,
+  SubmitBinding,
   SubmitButtonBinding,
-  ButtonBindingOptions, SelectBinding, HookForm,
 } from "./types"
+import { ObservableForm } from "@bytesoftio/form"
 
-export class FormBinder implements HookFormBinder {
-  target: HookForm
+export class FormBinder implements ObservableFormBinder {
+  target: ObservableForm
 
-  constructor(target: HookForm) {
+  constructor(target: ObservableForm) {
     this.target = target
   }
 

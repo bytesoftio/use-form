@@ -1,8 +1,9 @@
 import React from "react"
-import { createForm, FormBinder, useForm } from "./index"
+import { FormBinder, useForm } from "./index"
 import { mount } from "enzyme"
 import { act } from "react-dom/test-utils"
 import { createTimeout } from "@bytesoftio/helpers-promises"
+import { createForm } from "@bytesoftio/form"
 
 describe("FormBinder", () => {
   it("binds submit", async () => {
