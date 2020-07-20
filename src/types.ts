@@ -1,8 +1,8 @@
 import { ObservableForm } from "@bytesoftio/form"
 import { ValueInitializer } from "@bytesoftio/value"
 
-export type UseForm = <S extends object = any, R extends object = any>(initialState: ValueInitializer<ObservableForm<S, R>>) => UseFormSpread<S, R>
-export type UseFormSpread<S extends object = any, R extends object = any> = [ObservableForm<S, R>, ObservableFormBinder]
+export type UseForm = <TState extends object = any, TResult extends object = any>(initialState: ValueInitializer<ObservableForm<TState, TResult>>) => UseFormSpread<TState, TResult>
+export type UseFormSpread<TState extends object = any, TResult extends object = any> = [ObservableForm<TState, TResult>, ObservableFormBinder]
 
 export type CreateFormBinder = (form: ObservableForm) => ObservableFormBinder
 
