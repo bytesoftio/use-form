@@ -29,18 +29,20 @@ Lets take a look on how to use hooks and bindings:
 
 ```tsx
 import React from "react"
-import { createForm } from "@bytesoftio/form"
-import { useForm } from "@bytesoftio/use-form"
+import {createForm} from "@bytesoftio/form" 
+import {useForm, createFormBinder} from "@bytesoftio/use-form"
 
 const formFactory = () => createForm()
 const sharedFormInstance = createForm()
 
 const Component = () => {
-  const [formFromFactory, bind] = useForm(formFactory)
-  const [sharedForm] = useForm(sharedFormInstance)
-  const [formFromInlineFactory] = useForm(() => createForm())
+  const formFromFactory = useForm(formFactory)
+  const sharedForm = useForm(sharedFormInstance)
+  const formFromInlineFactory = useForm(() => createForm())
   
-	return (
+  const binder = createFormBinder(formFromFactory)
+  
+  return (
     <form { ...bind.form() }>
     	<input type="text" { ...bind.input("field1") } />
     	

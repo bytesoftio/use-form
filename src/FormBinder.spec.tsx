@@ -15,7 +15,7 @@ describe("FormBinder", () => {
 
     const Test = () => {
       return (
-        <form {...bind.form()}>
+        <form { ...bind.form() }>
           <button type="submit">click</button>
         </form>
       )
@@ -41,7 +41,7 @@ describe("FormBinder", () => {
 
     const Test = () => {
       return (
-        <form {...bind.form({ validate: false })}>
+        <form { ...bind.form({ validate: false }) }>
           <button type="submit">click</button>
         </form>
       )
@@ -68,7 +68,7 @@ describe("FormBinder", () => {
     const Test = () => {
       return (
         <form>
-          <button {...bind.button()}
+          <button { ...bind.button() }
                   type="submit">click
           </button>
         </form>
@@ -96,7 +96,7 @@ describe("FormBinder", () => {
     const Test = () => {
       return (
         <form>
-          <button {...bind.button({ validate: false })}
+          <button { ...bind.button({ validate: false }) }
                   type="submit">click
           </button>
         </form>
@@ -145,12 +145,36 @@ describe("FormBinder", () => {
       useForm(form)
 
       return (
-        <input {...bind.input("foo")}/>
+        <input { ...bind.input("foo") }/>
       )
     }
 
     const wrapper = mount(<Test/>)
     const target = () => wrapper.find("input")
+
+    expect(target().prop("name")).toBe("foo")
+    expect(target().prop("value")).toBe("bar")
+
+    target().simulate("change", { target: { value: "baz" } })
+
+    expect(target().prop("value")).toBe("baz")
+    expect(form.data.getAt("foo")).toBe("baz")
+  })
+
+  it("binds select", async () => {
+    const form = createForm({ foo: "bar" })
+    const bind = new FormBinder(form)
+
+    const Test = () => {
+      useForm(form)
+
+      return (
+        <select { ...bind.select("foo") }/>
+      )
+    }
+
+    const wrapper = mount(<Test/>)
+    const target = () => wrapper.find("select")
 
     expect(target().prop("name")).toBe("foo")
     expect(target().prop("value")).toBe("bar")
@@ -169,7 +193,7 @@ describe("FormBinder", () => {
       useForm(form)
 
       return (
-        <input {...bind.checkbox("foo")} type="checkbox"/>
+        <input { ...bind.checkbox("foo") } type="checkbox"/>
       )
     }
 
@@ -193,7 +217,7 @@ describe("FormBinder", () => {
       useForm(form)
 
       return (
-        <input {...bind.radio("foo", "a")} type="radio"/>
+        <input { ...bind.radio("foo", "a") } type="radio"/>
       )
     }
 
@@ -222,7 +246,7 @@ describe("FormBinder", () => {
       useForm(form)
 
       return (
-        <input {...bind.radio("foo")} type="radio"/>
+        <input { ...bind.radio("foo") } type="radio"/>
       )
     }
 

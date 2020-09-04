@@ -3,17 +3,16 @@ import { useForm } from "./index"
 import { mount } from "enzyme"
 import { createForm } from "@bytesoftio/form"
 import { act } from "react-dom/test-utils"
-import { createTimeout } from "@bytesoftio/helpers-promises"
 
 describe("useForm", () => {
   it("uses form", () => {
     const initializer = createForm({ foo: "bar" })
 
     const Test = () => {
-      const [form] = useForm(initializer)
+      const form = useForm(initializer)
 
       return (
-        <h1>{form.data.get().foo}</h1>
+        <h1>{ form.data.get().foo }</h1>
       )
     }
 
@@ -27,10 +26,10 @@ describe("useForm", () => {
     const initializer = () => createForm({ foo: "bar" })
 
     const Test = () => {
-      const [form] = useForm(initializer)
+      const form = useForm(initializer)
 
       return (
-        <h1>{form.data.get().foo}</h1>
+        <h1>{ form.data.get().foo }</h1>
       )
     }
 
@@ -41,7 +40,7 @@ describe("useForm", () => {
   })
 
   it("hooks all form state", () => {
-    const form = createForm({ foo: "bar" }).configure({validateOnChange: false})
+    const form = createForm({ foo: "bar" }).configure({ validateOnChange: false })
     let changes = 0
 
     const Test = () => {
@@ -49,12 +48,12 @@ describe("useForm", () => {
       useForm(form)
 
       return (
-        <h1>{JSON.stringify(form.data.get())},
-          {form.errors.get() === undefined ? "undefined" : JSON.stringify(form.errors.get())},
-          {JSON.stringify(form.submitting.get())},
-          {JSON.stringify(form.submitted.get())},
-          {JSON.stringify(form.dirtyFields.get())},
-          {JSON.stringify(form.changedFields.get())}</h1>
+        <h1>{ JSON.stringify(form.data.get()) },
+          { form.errors.get() === undefined ? "undefined" : JSON.stringify(form.errors.get()) },
+          { JSON.stringify(form.submitting.get()) },
+          { JSON.stringify(form.submitted.get()) },
+          { JSON.stringify(form.dirtyFields.get()) },
+          { JSON.stringify(form.changedFields.get()) }</h1>
       )
     }
 
@@ -64,7 +63,7 @@ describe("useForm", () => {
     expect(changes).toBe(1)
     expect(target().text()).toBe(`{"foo":"bar"},undefined,false,false,[],[]`)
 
-    act(() => form.errors.set({field: ["error"] }))
+    act(() => form.errors.set({ field: ["error"] }))
 
     expect(changes).toBe(2)
     expect(target().text()).toBe(`{"foo":"bar"},{"field":["error"]},false,false,[],[]`)
