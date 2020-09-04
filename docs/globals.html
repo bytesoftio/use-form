@@ -2706,9 +2706,6 @@ img {
 		<li class=" tsd-kind-type-alias">
 			<a href="globals.html#useform" class="tsd-kind-icon">Use<wbr>Form</a>
 		</li>
-		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-			<a href="globals.html#useformspread" class="tsd-kind-icon">Use<wbr>Form<wbr>Spread</a>
-		</li>
 		<li class=" tsd-kind-function">
 			<a href="globals.html#useform" class="tsd-kind-icon">use<wbr>Form</a>
 		</li>
@@ -2745,18 +2742,20 @@ img {
 			<p>After consuming a form you must bind it to input fields. This library already ships with a very lightweight binder inside, but you can very easily roll your own binder for your specific ui library. Just take a look on how <code>FormBinder</code>  is written - its easy as cake.</p>
 			<p>Lets take a look on how to use hooks and bindings:</p>
 			<pre><code class="language-tsx"><pre class="shiki" style="background-color: #FFFFFF"><code><span style="color: #0000FF">import</span><span style="color: #000000"> </span><span style="color: #001080">React</span><span style="color: #000000"> </span><span style="color: #0000FF">from</span><span style="color: #000000"> </span><span style="color: #A31515">"react"</span>
-<span style="color: #0000FF">import</span><span style="color: #000000"> { </span><span style="color: #001080">createForm</span><span style="color: #000000"> } </span><span style="color: #0000FF">from</span><span style="color: #000000"> </span><span style="color: #A31515">"@bytesoftio/form"</span>
-<span style="color: #0000FF">import</span><span style="color: #000000"> { </span><span style="color: #001080">useForm</span><span style="color: #000000"> } </span><span style="color: #0000FF">from</span><span style="color: #000000"> </span><span style="color: #A31515">"@bytesoftio/use-form"</span>
+<span style="color: #0000FF">import</span><span style="color: #000000"> {</span><span style="color: #001080">createForm</span><span style="color: #000000">} </span><span style="color: #0000FF">from</span><span style="color: #000000"> </span><span style="color: #A31515">"@bytesoftio/form"</span><span style="color: #000000"> </span>
+<span style="color: #0000FF">import</span><span style="color: #000000"> {</span><span style="color: #001080">useForm</span><span style="color: #000000">, </span><span style="color: #001080">createFormBinder</span><span style="color: #000000">} </span><span style="color: #0000FF">from</span><span style="color: #000000"> </span><span style="color: #A31515">"@bytesoftio/use-form"</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">formFactory</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">createForm</span><span style="color: #000000">()</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #001080">sharedFormInstance</span><span style="color: #000000"> = </span><span style="color: #795E26">createForm</span><span style="color: #000000">()</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">Component</span><span style="color: #000000"> = () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #001080">formFromFactory</span><span style="color: #000000">, </span><span style="color: #001080">bind</span><span style="color: #000000">] = </span><span style="color: #795E26">useForm</span><span style="color: #000000">(</span><span style="color: #001080">formFactory</span><span style="color: #000000">)</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #001080">sharedForm</span><span style="color: #000000">] = </span><span style="color: #795E26">useForm</span><span style="color: #000000">(</span><span style="color: #001080">sharedFormInstance</span><span style="color: #000000">)</span>
-<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #001080">formFromInlineFactory</span><span style="color: #000000">] = </span><span style="color: #795E26">useForm</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">createForm</span><span style="color: #000000">())</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #001080">formFromFactory</span><span style="color: #000000"> = </span><span style="color: #795E26">useForm</span><span style="color: #000000">(</span><span style="color: #001080">formFactory</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #001080">sharedForm</span><span style="color: #000000"> = </span><span style="color: #795E26">useForm</span><span style="color: #000000">(</span><span style="color: #001080">sharedFormInstance</span><span style="color: #000000">)</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #001080">formFromInlineFactory</span><span style="color: #000000"> = </span><span style="color: #795E26">useForm</span><span style="color: #000000">(() </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #795E26">createForm</span><span style="color: #000000">())</span>
 
-<span style="color: #000000">    </span><span style="color: #0000FF">return</span><span style="color: #000000"> (</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #001080">binder</span><span style="color: #000000"> = </span><span style="color: #795E26">createFormBinder</span><span style="color: #000000">(</span><span style="color: #001080">formFromFactory</span><span style="color: #000000">)</span>
+
+<span style="color: #000000">  </span><span style="color: #0000FF">return</span><span style="color: #000000"> (</span>
 <span style="color: #000000">    </span><span style="color: #800000">&lt;form</span><span style="color: #000000"> </span><span style="color: #0000FF">{</span><span style="color: #000000FF"> </span><span style="color: #000000">...</span><span style="color: #001080">bind</span><span style="color: #000000FF">.</span><span style="color: #795E26">form</span><span style="color: #000000FF">() </span><span style="color: #0000FF">}</span><span style="color: #800000">&gt;</span>
 <span style="color: #000000">        </span><span style="color: #800000">&lt;input</span><span style="color: #000000"> </span><span style="color: #FF0000">type</span><span style="color: #000000">=</span><span style="color: #A31515">"text"</span><span style="color: #000000"> </span><span style="color: #0000FF">{</span><span style="color: #000000FF"> </span><span style="color: #000000">...</span><span style="color: #001080">bind</span><span style="color: #000000FF">.</span><span style="color: #795E26">input</span><span style="color: #000000FF">(</span><span style="color: #A31515">"field1"</span><span style="color: #000000FF">) </span><span style="color: #0000FF">}</span><span style="color: #000000"> </span><span style="color: #800000">/&gt;</span>
 
@@ -2805,7 +2804,6 @@ img {
 							<li class="tsd-kind-type-alias"><a href="globals.html#submitbinding" class="tsd-kind-icon">Submit<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#submitbuttonbinding" class="tsd-kind-icon">Submit<wbr>Button<wbr>Binding</a></li>
 							<li class="tsd-kind-type-alias"><a href="globals.html#useform" class="tsd-kind-icon">Use<wbr>Form</a></li>
-							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#useformspread" class="tsd-kind-icon">Use<wbr>Form<wbr>Spread</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2825,7 +2823,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Button<wbr>Binding<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>disableOnSubmit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L10">src/types.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L9">src/types.ts:9</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2846,7 +2844,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Checkbox<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>checked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L16">src/types.ts:16</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L15">src/types.ts:15</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2888,7 +2886,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Create<wbr>Form<wbr>Binder<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>form<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L7">src/types.ts:7</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L6">src/types.ts:6</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2919,7 +2917,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Form<wbr>Binding<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>validate<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L9">src/types.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L8">src/types.ts:8</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2937,7 +2935,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Input<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L14">src/types.ts:14</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L13">src/types.ts:13</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -2979,7 +2977,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Radio<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>checked<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L17">src/types.ts:17</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L16">src/types.ts:16</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3021,7 +3019,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Select<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>onChange<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L15">src/types.ts:15</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L14">src/types.ts:14</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3063,7 +3061,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Submit<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>onSubmit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L12">src/types.ts:12</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L11">src/types.ts:11</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3099,7 +3097,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Submit<wbr>Button<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>disabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>onClick<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol"> }</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L13">src/types.ts:13</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L12">src/types.ts:12</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3135,10 +3133,10 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-type-alias">
 				<a name="useform" class="tsd-anchor"></a>
 				<h3>Use<wbr>Form</h3>
-				<div class="tsd-signature tsd-kind-icon">Use<wbr>Form<span class="tsd-signature-symbol">:</span> &lt;TState, TResult&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="globals.html#useformspread" class="tsd-signature-type">UseFormSpread</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<div class="tsd-signature tsd-kind-icon">Use<wbr>Form<span class="tsd-signature-symbol">:</span> &lt;TState, TResult&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L4">src/types.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/types.ts#L4">src/types.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-type-declaration">
@@ -3146,7 +3144,7 @@ img {
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-signature">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
-								<li class="tsd-signature tsd-kind-icon">&lt;TState, TResult&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#useformspread" class="tsd-signature-type">UseFormSpread</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+								<li class="tsd-signature tsd-kind-icon">&lt;TState, TResult&gt;<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
@@ -3165,31 +3163,12 @@ img {
 											<h5>initialState: <span class="tsd-signature-type">ValueInitializer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
 										</li>
 									</ul>
-									<h4 class="tsd-returns-title">Returns <a href="globals.html#useformspread" class="tsd-signature-type">UseFormSpread</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
-				<a name="useformspread" class="tsd-anchor"></a>
-				<h3>Use<wbr>Form<wbr>Spread</h3>
-				<div class="tsd-signature tsd-kind-icon">Use<wbr>Form<wbr>Spread&lt;TState, TResult&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a><span class="tsd-signature-symbol">]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/types.ts#L5">src/types.ts:5</a></li>
-					</ul>
-				</aside>
-				<h4 class="tsd-type-parameters-title">Type parameters</h4>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>TState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-					<li>
-						<h4>TResult<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h4>
-					</li>
-				</ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -3198,22 +3177,22 @@ img {
 				<a name="useform" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> use<wbr>Form</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">use<wbr>Form<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a><span class="tsd-signature-symbol">]</span></li>
+					<li class="tsd-signature tsd-kind-icon">use<wbr>Form<span class="tsd-signature-symbol">(</span>initialState<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/917cb93/src/useForm.ts#L8">src/useForm.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/bytesoftio/use-form/blob/da3fcc6/src/useForm.ts#L7">src/useForm.ts:7</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>initialState: <span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span></h5>
+								<h5>initialState: <span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">)</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/observableformbinder.html" class="tsd-signature-type">ObservableFormBinder</a><span class="tsd-signature-symbol">]</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">ObservableForm</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TState</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
