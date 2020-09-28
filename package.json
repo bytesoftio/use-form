@@ -25,7 +25,7 @@
     "@bytesoftio/helpers-promises": "^1.0.0",
     "@bytesoftio/schema": "^1.1.0",
     "@bytesoftio/use-store": "^3.0.0",
-    "@bytesoftio/use-value": "^2.2.0",
+    "@bytesoftio/use-value": "^3.0.0",
     "@bytesoftio/value": "^2.0.1",
     "lodash": "^4.17.15"
   },
