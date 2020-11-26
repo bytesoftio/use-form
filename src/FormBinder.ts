@@ -44,8 +44,8 @@ export class FormBinder implements ObservableFormBinder {
   input(path: string): InputBinding {
     return {
       name: path,
-      value: this.target.data.getAt(path),
-      onChange: (e) => this.target.data.setAt(path, e.target.value),
+      value: this.target.values.getAt(path),
+      onChange: (e) => this.target.values.setAt(path, e.target.value),
     }
   }
 
@@ -56,16 +56,16 @@ export class FormBinder implements ObservableFormBinder {
   checkbox(path: string): CheckboxBinding {
     return {
       name: path,
-      checked: this.target.data.getAt(path),
-      onChange: (e) => this.target.data.setAt(path, !! e.target.checked),
+      checked: this.target.values.getAt(path),
+      onChange: (e) => this.target.values.setAt(path, !! e.target.checked),
     }
   }
 
   radio(path: string, value: any = true): RadioBinding {
     return {
       name: path,
-      checked: value === this.target.data.getAt(path),
-      onChange: () => this.target.data.setAt(path, value),
+      checked: value === this.target.values.getAt(path),
+      onChange: () => this.target.values.setAt(path, value),
     }
   }
 }

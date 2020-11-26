@@ -12,7 +12,7 @@ describe("useForm", () => {
       const form = useForm(initializer)
 
       return (
-        <h1>{ form.data.get().foo }</h1>
+        <h1>{ form.values.get().foo }</h1>
       )
     }
 
@@ -29,7 +29,7 @@ describe("useForm", () => {
       const form = useForm(initializer)
 
       return (
-        <h1>{ form.data.get().foo }</h1>
+        <h1>{ form.values.get().foo }</h1>
       )
     }
 
@@ -48,7 +48,7 @@ describe("useForm", () => {
       useForm(form)
 
       return (
-        <h1>{ JSON.stringify(form.data.get()) },
+        <h1>{ JSON.stringify(form.values.get()) },
           { form.errors.get() === undefined ? "undefined" : JSON.stringify(form.errors.get()) },
           { JSON.stringify(form.submitting.get()) },
           { JSON.stringify(form.submitted.get()) },
@@ -88,7 +88,7 @@ describe("useForm", () => {
     expect(changes).toBe(6)
     expect(target().text()).toBe(`{"foo":"bar"},{"field":["error"]},true,true,["field1"],["field2"]`)
 
-    act(() => form.data.setAt("foo", "yolo"))
+    act(() => form.values.setAt("foo", "yolo"))
 
     expect(changes).toBe(7)
     expect(target().text()).toBe(`{"foo":"yolo"},{"field":["error"]},true,true,["field1","foo"],["field2","foo"]`)

@@ -4,15 +4,15 @@ import { useMemo } from "react"
 import { useValue } from "@bytesoftio/use-value"
 import { useStore } from "@bytesoftio/use-store"
 
-export const useForm: UseForm = (initialState) => {
-  const form = useMemo(() => isFunction(initialState) ? initialState() : initialState, [])
+export const useForm: UseForm = (initialValue) => {
+  const form = useMemo(() => isFunction(initialValue) ? initialValue() : initialValue, [])
 
-  useStore(form.data.state)
-  useValue(form.dirtyFields.state)
-  useValue(form.changedFields.state)
+  useStore(form.values.value)
+  useValue(form.dirtyFields.value)
+  useValue(form.changedFields.value)
   useValue(form.submitting)
   useValue(form.submitted)
-  useStore(form.errors.state)
+  useStore(form.errors.value)
   useStore(form.result)
 
   return form

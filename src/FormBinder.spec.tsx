@@ -158,7 +158,7 @@ describe("FormBinder", () => {
     target().simulate("change", { target: { value: "baz" } })
 
     expect(target().prop("value")).toBe("baz")
-    expect(form.data.getAt("foo")).toBe("baz")
+    expect(form.values.getAt("foo")).toBe("baz")
   })
 
   it("binds select", async () => {
@@ -182,7 +182,7 @@ describe("FormBinder", () => {
     target().simulate("change", { target: { value: "baz" } })
 
     expect(target().prop("value")).toBe("baz")
-    expect(form.data.getAt("foo")).toBe("baz")
+    expect(form.values.getAt("foo")).toBe("baz")
   })
 
   it("binds checkbox", async () => {
@@ -206,7 +206,7 @@ describe("FormBinder", () => {
     target().simulate("change", { target: { checked: true } })
 
     expect(target().prop("checked")).toBe(true)
-    expect(form.data.getAt("foo")).toBe(true)
+    expect(form.values.getAt("foo")).toBe(true)
   })
 
   it("binds radio", async () => {
@@ -230,9 +230,9 @@ describe("FormBinder", () => {
     target().simulate("change", { value: "a" })
 
     expect(target().prop("checked")).toBe(true)
-    expect(form.data.getAt("foo")).toBe("a")
+    expect(form.values.getAt("foo")).toBe("a")
 
-    act(() => form.data.setAt("foo", "b"))
+    act(() => form.values.setAt("foo", "b"))
     wrapper.update()
 
     expect(target().prop("checked")).toBe(false)
@@ -259,9 +259,9 @@ describe("FormBinder", () => {
     target().simulate("change")
 
     expect(target().prop("checked")).toBe(true)
-    expect(form.data.getAt("foo")).toBe(true)
+    expect(form.values.getAt("foo")).toBe(true)
 
-    act(() => form.data.setAt("foo", "yolo"))
+    act(() => form.values.setAt("foo", "yolo"))
     wrapper.update()
 
     expect(target().prop("checked")).toBe(false)

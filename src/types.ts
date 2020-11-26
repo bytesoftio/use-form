@@ -1,7 +1,6 @@
 import { ObservableForm } from "@bytesoftio/form"
-import { ValueInitializer } from "@bytesoftio/value"
 
-export type UseForm = <TState extends object = any, TResult extends object = any>(initialState: ValueInitializer<ObservableForm<TState, TResult>>) => ObservableForm<TState, TResult>
+export type UseForm = <TValue extends object = any, TResult extends object = any>(initialValue: FormInitializer<TValue, TResult>) => ObservableForm<TValue, TResult>
 
 export type CreateFormBinder = (form: ObservableForm) => ObservableFormBinder
 
@@ -14,6 +13,7 @@ export type InputBinding = { onChange: (e) => void, value: any, name: string }
 export type SelectBinding = { onChange: (e) => void, value: any, name: string }
 export type CheckboxBinding = { onChange: (e) => void, checked: any, name: string }
 export type RadioBinding = { onChange: (e) => void, checked: any, name: string }
+export type FormInitializer<TValue extends object, TResult extends object> = () => ObservableForm<TValue, TResult> | ObservableForm<TValue, TResult>
 
 export interface ObservableFormBinder {
   form(options?: Partial<FormBindingOptions>): SubmitBinding
