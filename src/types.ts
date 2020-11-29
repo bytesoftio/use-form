@@ -13,7 +13,7 @@ export type InputBinding = { onChange: (e) => void, value: any, name: string }
 export type SelectBinding = { onChange: (e) => void, value: any, name: string }
 export type CheckboxBinding = { onChange: (e) => void, checked: any, name: string }
 export type RadioBinding = { onChange: (e) => void, checked: any, name: string }
-export type FormInitializer<TValue extends object, TResult extends object> = () => ObservableForm<TValue, TResult> | ObservableForm<TValue, TResult>
+export type FormInitializer<TValue extends object, TResult extends object> = (() => ObservableForm<TValue, TResult>) | ObservableForm<TValue, TResult>
 
 export interface ObservableFormBinder {
   form(options?: Partial<FormBindingOptions>): SubmitBinding
