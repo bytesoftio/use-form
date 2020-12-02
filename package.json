@@ -21,7 +21,7 @@
     "release": "yarn run build && np --no-release-draft"
   },
   "dependencies": {
-    "@bytesoftio/form": "^3.8.0",
+    "@bytesoftio/form": "^3.9.0",
     "@bytesoftio/helpers-promises": "^1.0.0",
     "@bytesoftio/use-store": "^5.0.0",
     "@bytesoftio/use-value": "^4.0.0",
